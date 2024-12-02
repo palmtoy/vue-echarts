@@ -154,7 +154,7 @@ function getData() {
 <template>
   <VExample
     id="bar"
-    title="Horizontal Bar chart2"
+    title="Horizontal Bar chart3"
     desc="( with async data )"
   >
     <VChart

@@ -9,6 +9,7 @@ import { track } from "@vercel/analytics";
 import LogoChart from "./examples/LogoChart";
 import BarChart from "./examples/BarChart";
 import BarChart2 from "./examples/BarChart2";
+import BarChart3 from "./examples/BarChart3";
 import PieChart from "./examples/PieChart";
 import PolarChart from "./examples/PolarChart";
 import ScatterChart from "./examples/ScatterChart";
@@ -57,7 +58,8 @@ watch(codeOpen, open => {
       <a href="https://github.com/ecomfe/vue-echarts">Vue-ECharts</a>
     </h1>
 
-    <bar-chart2 />
+    <BarChart3 />
+    <BarChart2 />
     <bar-chart />
     <scatter-chart />
     <pie-chart />
