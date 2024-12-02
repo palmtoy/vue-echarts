@@ -24,6 +24,7 @@ export default function getData() {
       bottom: "3%",
       containLabel: true
     },
+    // Horizontal bar chart so x-axis is value, y-axis is category
     xAxis: {
       type: "value"
     },
@@ -31,6 +32,16 @@ export default function getData() {
       type: "category",
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     },
+    /*
+    // Vertical bar chart so x-axis is category, y-axis is value
+    xAxis: {
+      type: "category",
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    },
+    yAxis: {
+      type: "value"
+    },
+    */
     series: [
       {
         name: "Direct",
