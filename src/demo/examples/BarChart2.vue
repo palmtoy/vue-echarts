@@ -5,7 +5,7 @@ import { GridComponent, DatasetComponent } from "echarts/components";
 import { shallowRef, onBeforeUnmount } from "vue";
 import VChart from "../../ECharts";
 import VExample from "./Example";
-import getData from "../data/bar";
+import getData from "../data/bar2";
 import theme from "../theme.json";
 
 use([BarChart, DatasetComponent, GridComponent]);
@@ -48,7 +48,7 @@ function refresh() {
 <template>
   <v-example
     id="bar"
-    title="Bar chart"
+    title="Horizontal Bar chart"
     desc="(with async data &amp; custom theme)"
   >
     <v-chart
