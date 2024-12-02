@@ -8,6 +8,7 @@ import { track } from "@vercel/analytics";
 
 import LogoChart from "./examples/LogoChart";
 import BarChart from "./examples/BarChart";
+import BarChart2 from "./examples/BarChart2";
 import PieChart from "./examples/PieChart";
 import PolarChart from "./examples/PolarChart";
 import ScatterChart from "./examples/ScatterChart";
@@ -50,30 +51,14 @@ watch(codeOpen, open => {
 
 <template>
   <main>
-    <logo-chart />
+    <logo-chart style="margin-top: -38px" />
 
-    <h1>
+    <h1 style="margin-top: -38px">
       <a href="https://github.com/ecomfe/vue-echarts">Vue-ECharts</a>
     </h1>
-    <p class="desc">
-      Vue.js component for Apache ECharts™. (<a
-        href="https://github.com/ecomfe/vue-echarts#readme"
-        >docs</a
-      >)
-    </p>
-
-    <h2 class="sep">Examples</h2>
-    <p>
-      <small
-        >See
-        <a href="https://echarts.apache.org/examples/en/index.html"
-          >echarts.apache.org/examples</a
-        >
-        for all examples.</small
-      >
-    </p>
 
     <bar-chart />
+    <bar-chart2 />
     <scatter-chart />
     <pie-chart />
     <polar-chart />
