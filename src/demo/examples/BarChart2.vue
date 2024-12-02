@@ -44,12 +44,12 @@ function refresh() {
 </script>
 
 <template>
-  <v-example
+  <VExample
     id="bar"
     title="Horizontal Bar chart"
     desc="( with async data )"
   >
-    <v-chart
+    <VChart
       :option="option"
       autoresize
       :loading="loading"
@@ -70,5 +70,5 @@ function refresh() {
         <button @click="refresh" :disabled="seconds > 0">Refresh</button>
       </p>
     </template>
-  </v-example>
+  </VExample>
 </template>
