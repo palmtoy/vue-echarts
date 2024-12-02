@@ -57,8 +57,8 @@ watch(codeOpen, open => {
       <a href="https://github.com/ecomfe/vue-echarts">Vue-ECharts</a>
     </h1>
 
-    <bar-chart />
     <bar-chart2 />
+    <bar-chart />
     <scatter-chart />
     <pie-chart />
     <polar-chart />

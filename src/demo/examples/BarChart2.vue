@@ -36,7 +36,7 @@ function tick() {
 
 function refresh() {
   // simulating async data from server
-  seconds.value = 3;
+  seconds.value = 1;
   loading.value = true;
 
   timer = setInterval(tick, 1000);

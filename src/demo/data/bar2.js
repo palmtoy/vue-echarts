@@ -1,3 +1,13 @@
+function randomData(multiplier) {
+  const maxNum = 7;
+  const data = [];
+  for (let i = 0; i < maxNum; i++) {
+    const rdm = Math.round((1 + Math.random()) * multiplier * 100);
+    data.push(rdm);
+  }
+  return data;
+}
+
 export default function getData() {
   return {
     tooltip: {
@@ -32,7 +42,7 @@ export default function getData() {
         emphasis: {
           focus: "series"
         },
-        data: [320, 302, 301, 334, 390, 330, 320]
+        data: randomData(3)
       },
       {
         name: "Mail Ad",
@@ -44,7 +54,7 @@ export default function getData() {
         emphasis: {
           focus: "series"
         },
-        data: [120, 132, 101, 134, 90, 230, 210]
+        data: randomData(1)
       },
       {
         name: "Affiliate Ad",
@@ -56,7 +66,7 @@ export default function getData() {
         emphasis: {
           focus: "series"
         },
-        data: [220, 182, 191, 234, 290, 330, 310]
+        data: randomData(2)
       },
       {
         name: "Video Ad",
@@ -68,7 +78,7 @@ export default function getData() {
         emphasis: {
           focus: "series"
         },
-        data: [150, 212, 201, 154, 190, 330, 410]
+        data: randomData(5)
       },
       {
         name: "Search Engine",
@@ -80,7 +90,7 @@ export default function getData() {
         emphasis: {
           focus: "series"
         },
-        data: [820, 832, 901, 934, 1290, 1330, 1320]
+        data: randomData(8)
       }
     ]
   };
