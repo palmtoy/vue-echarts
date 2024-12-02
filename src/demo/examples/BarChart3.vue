@@ -4,10 +4,10 @@ import { BarChart } from "echarts/charts";
 import { GridComponent, DatasetComponent } from "echarts/components";
 import { shallowRef, onBeforeUnmount } from "vue";
 import VChart from "../../ECharts";
-import VExample from "./Example";
 
 use([BarChart, DatasetComponent, GridComponent]);
 
+const id = shallowRef("bar3");
 const seconds = shallowRef(0);
 const loading = shallowRef(false);
 const loadingOptions = {
@@ -152,31 +152,81 @@ function getData() {
 </script>
 
 <template>
-  <VExample
-    id="bar"
-    title="Horizontal Bar chart3"
-    desc="( with async data )"
-  >
-    <VChart
-      :option="option"
-      autoresize
-      :loading="loading"
-      :loadingOptions="loadingOptions"
-    />
-    <template #extra>
-      <p v-if="seconds <= 0">
-        <small>Loaded.</small>
-      </p>
-      <p v-else>
-        <small>
-          Data coming in
-          <b>{{ seconds }}</b>
-          second{{ seconds > 1 ? "s" : "" }}...
-        </small>
-      </p>
-      <p class="actions">
-        <button @click="refresh" :disabled="seconds > 0">Refresh</button>
-      </p>
-    </template>
-  </VExample>
+  <h3 :id="id">
+    <a :href="`#${id}`">
+      Horizontal Bar chart3
+      <small>( with async data )</small>
+    </a>
+  </h3>
+  <section>
+    <figure class="fig hero">
+      <VChart
+        :option="option"
+        autoresize
+        :loading="loading"
+        :loadingOptions="loadingOptions"
+      />
+    </figure>
+    <p v-if="seconds <= 0">
+      <small>Loaded.</small>
+    </p>
+    <p v-else>
+      <small>
+        Data coming in
+        <b>{{ seconds }}</b>
+        second{{ seconds > 1 ? "s" : "" }}...
+      </small>
+    </p>
+    <p class="actions">
+      <button @click="refresh" :disabled="seconds > 0">Refresh</button>
+    </p>
+  </section>
 </template>
+
+<style>
+.fig {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 2em auto;
+
+  .echarts {
+    width: calc(60vw + 4em);
+    height: 360px;
+    max-width: 720px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 980px) {
+  .fig {
+    width: 100vw;
+    margin: 1em auto;
+
+    .echarts {
+      width: 100%;
+      min-width: 0;
+      height: 60vw;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .fig.half {
+    .echarts {
+      width: 28vw;
+      min-width: 240px;
+      height: 180px;
+    }
+
+    & + & {
+      margin-left: 30px;
+    }
+  }
+}
+</style>
