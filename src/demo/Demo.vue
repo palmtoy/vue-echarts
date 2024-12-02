@@ -74,9 +74,9 @@ watch(codeOpen, open => {
     </p>
 
     <bar-chart />
+    <scatter-chart />
     <pie-chart />
     <polar-chart />
-    <scatter-chart />
     <geo-chart />
     <radar-chart />
     <connect-chart />
