@@ -45,7 +45,7 @@ function randomData(multiplier) {
   const maxNum = 7;
   const data = [];
   for (let i = 0; i < maxNum; i++) {
-    const rdm = Math.round((1 + Math.random()) * multiplier * 100);
+    const rdm = Math.round((1 + Math.random()) * multiplier * 50);
     data.push(rdm);
   }
   return data;
@@ -73,7 +73,7 @@ function getData() {
     },
     yAxis: {
       type: "category",
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      data: ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple"]
     },
     /*
     // Vertical bar chart so x-axis is category, y-axis is value
