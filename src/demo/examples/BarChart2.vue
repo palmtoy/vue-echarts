@@ -1,15 +1,13 @@
 <script setup>
-import { use, registerTheme } from "echarts/core";
+import { use } from "echarts/core";
 import { BarChart } from "echarts/charts";
 import { GridComponent, DatasetComponent } from "echarts/components";
 import { shallowRef, onBeforeUnmount } from "vue";
 import VChart from "../../ECharts";
 import VExample from "./Example";
 import getData from "../data/bar2";
-import theme from "../theme.json";
 
 use([BarChart, DatasetComponent, GridComponent]);
-registerTheme("ovilia-green", theme);
 
 const seconds = shallowRef(0);
 const loading = shallowRef(false);
@@ -49,11 +47,10 @@ function refresh() {
   <v-example
     id="bar"
     title="Horizontal Bar chart"
-    desc="(with async data &amp; custom theme)"
+    desc="( with async data )"
   >
     <v-chart
       :option="option"
-      theme="ovilia-green"
       autoresize
       :loading="loading"
       :loadingOptions="loadingOptions"
