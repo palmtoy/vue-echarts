@@ -159,14 +159,14 @@ function getData() {
     </a>
   </h3>
   <section>
-    <figure class="fig hero">
+    <div class="fig hero">
       <VChart
         :option="option"
         autoresize
         :loading="loading"
         :loadingOptions="loadingOptions"
       />
-    </figure>
+    </div>
     <p v-if="seconds <= 0">
       <small>Loaded.</small>
     </p>
