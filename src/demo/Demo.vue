@@ -11,6 +11,7 @@ import BarChart from "./examples/BarChart";
 import BarChart2 from "./examples/BarChart2";
 import BarChart3 from "./examples/BarChart3";
 import PieChart from "./examples/PieChart";
+import PieChart2 from "./examples/PieChart2";
 import PolarChart from "./examples/PolarChart";
 import ScatterChart from "./examples/ScatterChart";
 import GeoChart from "./examples/GeoChart";
@@ -58,11 +59,12 @@ watch(codeOpen, open => {
       <a href="https://github.com/ecomfe/vue-echarts">Vue-ECharts</a>
     </h1>
 
+    <PieChart2 />
+    <pie-chart />
     <BarChart3 />
     <BarChart2 />
     <bar-chart />
     <scatter-chart />
-    <pie-chart />
     <polar-chart />
     <geo-chart />
     <radar-chart />
