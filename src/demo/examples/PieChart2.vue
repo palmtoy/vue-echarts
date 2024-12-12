@@ -37,6 +37,7 @@ function getData() {
     },
     series: [
       {
+        name: "Pie Traffic Sources",
         type: "pie",
         radius: "65%",
         center: ["50%", "50%"],
