@@ -1,3 +1,9 @@
+<template>
+  <v-example id="pie" title="Pie chart2 ( Traffic Sources )">
+    <v-chart ref="pie" :option="option" autoresize @click="onChartClick" />
+  </v-example>
+</template>
+
 <script setup>
 import { use } from "echarts/core";
 import { PieChart } from "echarts/charts";
@@ -59,10 +65,8 @@ function getData() {
     ]
   };
 }
-</script>
 
-<template>
-  <v-example id="pie" title="Pie chart2 ( Traffic Sources )">
-    <v-chart ref="pie" :option="option" autoresize />
-  </v-example>
-</template>
+function onChartClick(event) {
+  console.log(`[${new Date().toLocaleString()}] _onChartClick ~ Object.keys(event) = ${Object.keys(event)}`);
+}
+</script>
