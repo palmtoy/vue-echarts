@@ -149,6 +149,10 @@ function getData() {
     ]
   };
 }
+
+function onBarChart3Click(event) {
+  console.log(`[${new Date().toLocaleString()}] _onBarChart3Click ~ Object.keys(event) = ${Object.keys(event)}`);
+}
 </script>
 
 <template>
@@ -165,6 +169,7 @@ function getData() {
         autoresize
         :loading="loading"
         :loadingOptions="loadingOptions"
+         @click="onBarChart3Click"
       />
     </div>
     <p v-if="seconds <= 0">

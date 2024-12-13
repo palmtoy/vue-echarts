@@ -1,6 +1,6 @@
 <template>
   <v-example id="pie" title="Pie chart2 ( Traffic Sources )">
-    <v-chart ref="pie" :option="option" autoresize @click="onChartClick" />
+    <v-chart ref="pie" :option="option" autoresize @click="onPieChart2Click" />
   </v-example>
 </template>
 
@@ -66,7 +66,7 @@ function getData() {
   };
 }
 
-function onChartClick(event) {
-  console.log(`[${new Date().toLocaleString()}] _onChartClick ~ Object.keys(event) = ${Object.keys(event)}`);
+function onPieChart2Click(event) {
+  console.log(`[${new Date().toLocaleString()}] _onPieChart2Click ~ Object.keys(event) = ${Object.keys(event)}`);
 }
 </script>
